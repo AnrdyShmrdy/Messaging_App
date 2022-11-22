@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messaging_App.Views.HomePage"
+             xmlns:models="clr-namespace:Messaging_App.Models"
+             Title="HomePage">
+    <ContentPage.BindingContext>
+        <models:Home/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding LabelText}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button x:Name="navButton"
+                Text="{Binding ButtonText}"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+    </VerticalStackLayout>
+</ContentPage>
